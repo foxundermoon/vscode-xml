@@ -122,7 +122,7 @@
         "onCommand:xmlTools.viewXmlTree"
     ],
     "devDependencies": {
-        "vscode": "^0.11.8",
+        "vscode": "^1.0.3",
         "typescript": "^1.6.2",
         "gulp": "^3.9.0",
         "gulp-shell": "^0.5.1"
