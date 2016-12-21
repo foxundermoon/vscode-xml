@@ -22,8 +22,7 @@
 		"url": "https://github.com/DotJoshJohnson/vscode-xml/issues"
 	},
 	"engines": {
-		"vscode": "^0.10.7",
-		"node": "^0.12.0"
+		"vscode": "^1.8.1"
 	},
 	"categories": [
 		"Languages",
