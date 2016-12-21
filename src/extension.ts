@@ -18,15 +18,15 @@ export function activate(ctx: vsc.ExtensionContext) {
     GlobalState = ctx.globalState;
     WorkspaceState = ctx.workspaceState;
     
-	// register palette commands
+    // register palette commands
     ctx.subscriptions.push(
         vsc.commands.registerTextEditorCommand('xmlTools.minifyXml', TextEditorCommands.minifyXml),
         vsc.commands.registerTextEditorCommand('xmlTools.evaluateXPath', TextEditorCommands.evaluateXPath),
         vsc.commands.registerTextEditorCommand('xmlTools.executeXQuery', TextEditorCommands.executeXQuery),
         vsc.commands.registerTextEditorCommand('xmlTools.viewXmlTree', TextEditorCommands.viewXmlTree)
     );
-	
-	// register language feature providers
+    
+    // register language feature providers
     ctx.subscriptions.push(
         vsc.languages.registerDocumentFormattingEditProvider([LANG_XML, LANG_XSL], new XmlFormattingEditProvider()),
         vsc.languages.registerDocumentRangeFormattingEditProvider([LANG_XML, LANG_XSL], new XmlFormattingEditProvider()),
