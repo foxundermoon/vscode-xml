@@ -123,7 +123,7 @@
     ],
     "devDependencies": {
         "vscode": "^1.0.3",
-        "typescript": "^1.6.2",
+        "typescript": "^2.1.4",
         "gulp": "^3.9.0",
         "gulp-shell": "^0.5.1"
     },
