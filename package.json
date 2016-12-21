@@ -128,7 +128,7 @@
         "gulp-shell": "^0.5.1"
     },
     "dependencies": {
-        "xmldom": "^0.1.22",
+        "xmldom": "^0.1.27",
         "xpath": "^0.0.9",
         "xqlint": "^0.2.9"
     },
