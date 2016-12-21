@@ -122,6 +122,8 @@
         "onCommand:xmlTools.viewXmlTree"
     ],
     "devDependencies": {
+        "@types/node": "6.0.52",
+        "@types/xmldom": "0.1.28",
         "vscode": "^1.0.3",
         "typescript": "^2.1.4",
         "gulp": "^3.9.0",
