@@ -8,6 +8,7 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": false,
         "removeComments": true,
+		"strictNullChecks": true,
         "target": "es6"
 	},
 	
