@@ -1,8 +1,8 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import * as ext from '../Extension';
-import { XPathEvaluator, EvaluatorResult, EvaluatorResultType } from '../services/XPathEvaluator';
+import * as ext from '../extension';
+import { XPathEvaluator, EvaluatorResult, EvaluatorResultType } from '../services';
 
 const CFG_SECTION: string = 'xmlTools';
 const CFG_PERSIST_QUERY: string = 'persistXPathQuery';

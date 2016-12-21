@@ -1,13 +1,9 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import * as ext from './Extension';
-import * as xpath from 'xpath';
-import { RangeUtil } from './utils/RangeUtil';
-import { XmlFormatter } from './services/XmlFormatter';
-import { XPathFeatureProvider } from './providers/XPath';
-import { XQueryExecutionProvider } from './providers/Execution';
-import { XmlTreeDocumentContentProvider } from './providers/Content';
+import { RangeUtil } from './utils';
+import { XmlFormatter } from './services';
+import { XPathFeatureProvider, XQueryExecutionProvider, XmlTreeDocumentContentProvider } from './providers';
 
 const CFG_SECTION: string = 'xmlTools';
 const CFG_REMOVE_COMMENTS: string = 'removeCommentsOnMinify';

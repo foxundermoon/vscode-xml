@@ -1,11 +1,8 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { TextEditorCommands } from './Commands';
-import { XmlFormattingEditProvider } from './providers/Formatting';
-import { XQueryLintingFeatureProvider } from './providers/Linting';
-import { XQueryCompletionItemProvider } from './providers/Completion';
-import { XmlTreeDocumentContentProvider } from './providers/Content';
+import { TextEditorCommands } from './commands';
+import { XmlFormattingEditProvider, XQueryCompletionItemProvider, XQueryLintingFeatureProvider, XmlTreeDocumentContentProvider } from './providers';
 
 export var GlobalState: vsc.Memento;
 export var WorkspaceState: vsc.Memento;

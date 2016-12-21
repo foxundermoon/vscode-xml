@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { XQueryLinter, XQueryDiagnostic } from '../services/XQueryLinter';
+import { XQueryLinter, XQueryDiagnostic } from '../services';
 
 export class XQueryLintingFeatureProvider {
     private static _coreDiagnostics: vsc.DiagnosticCollection;

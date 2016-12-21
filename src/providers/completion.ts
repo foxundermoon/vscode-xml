@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { XQueryCompleter, XQueryCompletionItem } from '../services/XQueryCompleter';
+import { XQueryCompleter, XQueryCompletionItem } from '../services';
 
 export class XQueryCompletionItemProvider implements vsc.CompletionItemProvider {
     provideCompletionItems(document: vsc.TextDocument, position: vsc.Position): vsc.CompletionItem[] {

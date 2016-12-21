@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { XmlTreeService } from '../services/XmlTreeService';
+import { XmlTreeService } from '../services';
 
 export class XmlTreeDocumentContentProvider implements vsc.TextDocumentContentProvider {
     

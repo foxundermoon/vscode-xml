@@ -1,8 +1,8 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { RangeUtil } from '../utils/RangeUtil';
-import { XmlFormatter, IXmlFormatterOptions } from '../services/XmlFormatter';
+import { RangeUtil } from '../utils';
+import { XmlFormatter, IXmlFormatterOptions } from '../services';
 
 const CFG_SECTION: string = 'xmlTools';
 const CFG_SPLIT_NAMESPACES: string = 'splitXmlnsOnFormat';

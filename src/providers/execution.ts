@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vsc from 'vscode';
-import { ChildProcess } from '../services/ChildProcess';
+import { ChildProcess } from '../services';
 
 const CFG_SECTION: string = 'xmlTools';
 const CFG_XQEXEC: string = 'xqueryExecutionEngine';
