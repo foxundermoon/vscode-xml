@@ -5,13 +5,8 @@ import { RangeUtil } from './utils';
 import { XmlFormatter } from './services';
 import { XPathFeatureProvider, XQueryExecutionProvider, XmlTreeDocumentContentProvider } from './providers';
 
-const CFG_SECTION: string = 'xmlTools';
-const CFG_REMOVE_COMMENTS: string = 'removeCommentsOnMinify';
-
 export class TextEditorCommands {
-    static minifyXml(editor: vsc.TextEditor, edit: vsc.TextEditorEdit): void {
-        let removeComments: boolean = vsc.workspace.getConfiguration(CFG_SECTION).get<boolean>(CFG_REMOVE_COMMENTS, false);
-        
+    static minifyXml(editor: vsc.TextEditor, edit: vsc.TextEditorEdit): void {        
         let range: vsc.Range = RangeUtil.getRangeForDocument(editor.document);
         
         let formatter: XmlFormatter = new XmlFormatter();

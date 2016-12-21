@@ -145,10 +145,7 @@ export class XmlFormatter {
     
     private _stripLineBreaks(xml: string): string {
         let output: string = '';
-        let inTag: boolean = false;
-        let inTagName: boolean = false;
         let inCdata: boolean = false;
-        let inAttribute: boolean = false;
         
         for (let i = 0; i < xml.length; i++) {
             let char: string = xml.charAt(i);
