@@ -30,7 +30,7 @@
         "Other",
         "Formatters"
     ],
-    "main": "./src/Extension",
+    "main": "./src/extension",
     "contributes": {
         "commands": [
             {
