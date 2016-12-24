@@ -3,7 +3,9 @@
 import * as vsc from 'vscode';
 import { TextEditorCommands } from './commands';
 import { XmlFormattingEditProvider, XQueryCompletionItemProvider, XQueryLintingFeatureProvider, XmlTreeDocumentContentProvider } from './providers';
+import { DocumentModel } from './services';
 
+export var DocumentModels = new Array<DocumentModel>();
 export var GlobalState: vsc.Memento;
 export var WorkspaceState: vsc.Memento;
 
@@ -44,6 +46,21 @@ export function activate(ctx: vsc.ExtensionContext) {
         vsc.window.onDidChangeActiveTextEditor(_handleChangeActiveTextEditor),
         vsc.window.onDidChangeTextEditorSelection(_handleChangeTextEditorSelection)
     );
+
+    // listen for new documents and push them to the document model collection
+    vsc.workspace.onDidOpenTextDocument((e: vsc.TextDocument) => {
+        DocumentModels.push(new DocumentModel(e));
+    });
+
+    // listen for closed documents to remove them from the collection
+    vsc.workspace.onDidCloseTextDocument((e: vsc.TextDocument) => {
+        let model = DocumentModels.find(x => x.baseDocument === e);
+
+        if (model) {
+            model.dispose();
+            DocumentModels.splice(DocumentModels.indexOf(model), 1);
+        }
+    });
 }
 
 export function deactivate() {
